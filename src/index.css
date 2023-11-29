@@ -3,7 +3,10 @@
 :root {
   --font-family: 'Jost', sans-serif;
 
-  --gradient-bar: linear-gradient(103.22deg, #242F9B -13.86%, #F6F6F6 99.55%);
+  --gradient-bgBig: linear-gradient(153deg, #646FD4 23.22%, rgba(100, 111, 212, 0.81) 57.53%, rgba(100, 111, 212, 0.00) 85.25%);
+  --gradient-bgSmall: radial-gradient(79.65% 79.65% at 71.49% 33.4%, #646FD4 0.84%, #646FD4 2.09%, #646FD4 62.1%, #99A0E3 94.39%, #FFF 100%);
+
+
   
   --color-bg: #F6F6F6;
   --color-primary : #242F9B;
