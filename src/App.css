@@ -16,11 +16,11 @@ body {
 }
 
 .section__padding {
-  padding: 2rem 6rem;
+  padding: 1rem 2rem;
 }
 
 .section__margin {
-  margin: 4rem 6rem;
+  margin: 1rem 2rem;
 }
 
 .scale-up-center {
@@ -30,6 +30,7 @@ body {
 
 .header{
   max-width: 600px;
+  width: 100%;
   display: flex; 
   justify-content: center;
   align-items: center;

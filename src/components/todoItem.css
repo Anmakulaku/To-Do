@@ -1,0 +1,35 @@
+.toDoItem{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.toDoItem__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+.toDoItem__text{
+    flex: 2;
+    padding: 0.5rem;
+    font-size: 1.2em;
+    font-family: var(--font-family);
+}
+.toDoItem__icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.toDoItem__icon:hover{
+    transform: scale(1.1);
+    color: var(--color-secondary);
+}
+.toDoItem__icon{
+    padding: 0 0.5rem;
+    font-size: 1.5em;
+    cursor: pointer;
+}
