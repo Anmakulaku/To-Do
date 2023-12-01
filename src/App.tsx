@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import './App.css';
+import Header from './components/Header';
 import InputField from './components/InputField';
 import {Todo} from './interface';
 import TodoList from './components/TodoList';
@@ -20,12 +21,10 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <div className='header section__padding'>
-        <div className="header__content section padding">
-            <h1 className="header__title">DO IT NOW</h1>
-            <InputField  todo={todo} setTodo={setTodo} addTodo={addTodo} />
-            <TodoList todos={todos} setTodos={setTodos}/>
-        </div>
+      <div className='App__content section__padding'>
+        <Header />
+        <InputField  todo={todo} setTodo={setTodo} addTodo={addTodo} />
+        <TodoList todos={todos} setTodos={setTodos}/>
       </div>
     </div>
   );
