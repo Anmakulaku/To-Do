@@ -4,6 +4,28 @@
     justify-content: center;
     width: 100%;
 }
-.todoList__content{
+.todoList__container{
     margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+.todoList__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.todoList__title{
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+    color: var(--color-white);
+    padding: 1rem;
+}
+.todoList__emergency{
+    background: var(--color-primary);
+    border-radius: 1rem;
 }

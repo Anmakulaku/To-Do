@@ -3,6 +3,9 @@
     flex-direction: row;
     width: 100%;
 }
+.toDoItem:hover{
+    transform: scale(1.02);
+}
 .toDoItem__content{
     display: flex;
     flex-direction: row;
@@ -26,11 +29,11 @@
     align-items: center;
 }
 .toDoItem__icon:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .toDoItem__icon{
-    padding: 0 0.5rem;
-    font-size: 1.5em;
+    padding: 0 0.3rem;
+    font-size: 1.2em;
     cursor: pointer;
 }
 .toDoItem__input{
