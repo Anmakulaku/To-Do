@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Todo } from '../interface';
 import { AiOutlineEdit, AiOutlineDelete,  } from 'react-icons/ai'
 import { MdOutlineDownloadDone  } from 'react-icons/md'
@@ -37,12 +37,19 @@ const ToDoItem: React.FC<TDIProps> = ({todo, todos, setTodos}) => {
         setEdit(false);
     }
 
+    const editRef = React.useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        editRef.current?.focus();
+    }, [edit]);
+
     return (
     
         <form className='toDoItem' onSubmit={(e) => handleEdit(e,todo.id)}>
             <div className="toDoItem__content">
                 {edit ? (
                     <input 
+                    ref={editRef}
                     value={editTodo} onChange={(e) => setEditTodo(e.target.value)} className='toDoItem__input'/>
                 ): todo.isDone ? (
                     <s className="toDoItem__text">{todo.todo}</s>
