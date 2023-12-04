@@ -25,7 +25,7 @@
     color: var(--color-white);
     padding: 1rem;
 }
-.todoList__emergency{
+.todoList__content--urgent{
     background: var(--color-primary);
     border-radius: 1rem;
 }
