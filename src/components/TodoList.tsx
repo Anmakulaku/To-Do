@@ -2,16 +2,16 @@ import React from 'react'
 import './todoList.css'
 import {Todo} from '../interface'
 import ToDoItem from './ToDoItem';
-import { Droppable } from 'react-beautiful-dnd';
+import { StrictModeDroppable as Droppable } from '../helpers/StrictModeDroppable';
 
 interface TDListProps {
     todos: Todo[];
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-    urgentTodos: Todo[];
+    UrgentTodos: Todo[];
     setUrgentTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const TodoList: React.FC<TDListProps> = ({todos, setTodos, urgentTodos, setUrgentTodos}) => {
+const TodoList: React.FC<TDListProps> = ({todos, setTodos, UrgentTodos, setUrgentTodos}) => {
     return (
         <div className='todoList'>
             <div className="todoList__container">
@@ -42,8 +42,8 @@ const TodoList: React.FC<TDListProps> = ({todos, setTodos, urgentTodos, setUrgen
                                     <h2 className='todoList__urgentTitle'>Do it right now!</h2>
                             </div>
                             {
-                                urgentTodos.map((todo, index) => (
-                                <ToDoItem index={index} todo={todo} key={todo.id} todos={urgentTodos} setTodos={setUrgentTodos} />
+                                UrgentTodos.map((todo, index) => (
+                                <ToDoItem index={index} todo={todo} key={todo.id} todos={UrgentTodos} setTodos={setUrgentTodos} />
                             ))}
                             {provided.placeholder}
                         </div>

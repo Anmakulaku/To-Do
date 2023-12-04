@@ -9,7 +9,7 @@ import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
-  const [urgentTodos, setUrgentTodos] = useState<Todo[]>([]);
+  const [UrgentTodos, setUrgentTodos] = useState<Todo[]>([]);
 
   const addTodo = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const App: React.FC = () => {
 
     let add, 
         active = todos, 
-        urgent = urgentTodos;
+        urgent = UrgentTodos;
     //SOURCE
     if(source.droppableId === 'Tasks') {
       add = active[source.index];
@@ -58,7 +58,7 @@ const App: React.FC = () => {
       <div className='App__content section__padding'>
         <Header />
         <InputField  todo={todo} setTodo={setTodo} addTodo={addTodo} />
-        <TodoList todos={todos} setTodos={setTodos} urgentTodos={urgentTodos} setUrgentTodos={setUrgentTodos}/>
+        <TodoList todos={todos} setTodos={setTodos} UrgentTodos={UrgentTodos} setUrgentTodos={setUrgentTodos}/>
       </div>
     </div>
     </DragDropContext>
