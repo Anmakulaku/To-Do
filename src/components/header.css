@@ -5,20 +5,44 @@
     justify-content: center;
     align-items: center;
 }
+.header__circle--right {
+    position: fixed;
+    width: 320px;
+    height: 320px;
+    border-radius: 320px;
+    top: -40px;
+    left: 115px;
+    background: var(--gradient-bgBig);
+}
+.header__circle--left {
+    position: fixed;
+    width: 240px;
+    height: 240px;
+    border-radius: 240px;
+    top: -35px;
+    left: -35px;
+    background: var(--gradient-bgSmall);
+}
 .header__content {
-    flex: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    background: var(--color-secondary);
-    border-radius: 20px;
 }
 .header__title{
     font-family: var(--font-family);
-    font-size: 24px;
+    font-size: 1.2em;
+    letter-spacing: 0.1rem;
     font-weight: 600;
     line-height: 35px;
     color: var(--color-white);
+}
+.header__text{
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    line-height: 35px;
+    color: var(--color-dark);
 }

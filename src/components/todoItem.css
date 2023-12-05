@@ -8,7 +8,7 @@
 }
 .toDoItem__content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-bg);
@@ -20,7 +20,7 @@
 .toDoItem__text{
     flex: 2;
     padding: 0.5rem;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: var(--font-family);
 }
 .toDoItem__icons{
@@ -33,7 +33,7 @@
 }
 .toDoItem__icon{
     padding: 0 0.3rem;
-    font-size: 1.2em;
+    font-size: 0.8em;
     cursor: pointer;
 }
 .toDoItem__input{
@@ -48,5 +48,8 @@
 }
 .toDoItem__input:focus{
     outline: none;
-
+}
+.drag {
+    box-shadow: 0 0 15px var(--color-black);
+    border-radius: 1rem;
 }

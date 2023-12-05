@@ -47,8 +47,8 @@ const ToDoItem: React.FC<TDUrgentProps> = ({index, todo, todos, setTodos}) => {
 
     return (
         <Draggable draggableId={todo.id.toString()} index={index}>
-            {(provided) => (
-                <form className='toDoItem' onSubmit={(e) => handleEdit(e,todo.id)}
+            {(provided, snapshot) => (
+                <form className={`toDoItem ${snapshot.isDragging ? "drag" : ""}`} onSubmit={(e) => handleEdit(e,todo.id)}
                 ref={provided.innerRef}
                 {...provided.draggableProps}
                 {...provided.dragHandleProps}
