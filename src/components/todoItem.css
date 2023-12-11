@@ -53,3 +53,18 @@
     box-shadow: 0 0 15px var(--color-black);
     border-radius: 1rem;
 }
+@media screen and (min-width: 1200px) {
+    .toDoItem__content{
+        flex-direction: row;
+        padding: 1rem;
+    }
+    .toDoItem__text{
+        font-size: 1.5em;
+    }
+    .toDoItem__icon{
+        font-size: 1.5em;
+    }
+    .toDoItem__input{
+        font-size: 1.5em;
+    }
+}

@@ -8,6 +8,13 @@
 body {
   background-color: var(--color-bg);
   margin: 0 auto;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .gradient__bg {
