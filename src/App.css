@@ -8,13 +8,6 @@
 body {
   background-color: var(--color-bg);
   margin: 0 auto;
-  overflow: hidden;
-}
-
-#root {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .gradient__bg {
@@ -35,16 +28,54 @@ body {
 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .App{
-  max-width: 1000px;
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
   display: flex; 
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.App__circle-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.App__circle--right {
+  aspect-ratio: 1/1;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+  border-radius: 50%;
+  background: var(--gradient-bgBig);
+}
+.App__circle--left {
+  aspect-ratio: 1/1;
+  width: 80%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate( -90%, -50%);
+  border-radius: 50%;
+  background: var(--gradient-bgSmall);
 }
 .App__content {
+  width: 100%;
+  min-height: 100vh;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .App__circle--right {
+    transform: translate(-20%, -70%);
+  }
+  .App__circle--left {
+    transform: translate( -90%, -70%);
+  }
 }

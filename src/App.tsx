@@ -55,6 +55,10 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
     <div className="App">
+      <div className="App__circle-container">
+        <div className="App__circle--left"></div>
+        <div className="App__circle--right"></div>
+      </div>
       <div className='App__content section__padding'>
         <Header />
         <InputField  todo={todo} setTodo={setTodo} addTodo={addTodo} />

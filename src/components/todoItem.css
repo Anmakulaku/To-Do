@@ -50,7 +50,7 @@
     outline: none;
 }
 .drag {
-    box-shadow: 0 0 15px var(--color-black);
+    box-shadow: 0 0 5px var(--color-black);
     border-radius: 1rem;
 }
 @media screen and (min-width: 1200px) {
